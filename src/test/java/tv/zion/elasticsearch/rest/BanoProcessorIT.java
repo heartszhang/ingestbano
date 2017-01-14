@@ -1,4 +1,4 @@
-package tv.zion.elasticsearch.ingest;
+package tv.zion.elasticsearch.rest;
 
 import org.elasticsearch.test.ESTestCase;
 

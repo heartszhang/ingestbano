@@ -1,4 +1,4 @@
-package tv.zion.elasticsearch.ingest;
+package tv.zion.elasticsearch.rest;
 
 import org.elasticsearch.action.admin.cluster.node.info.NodeInfo;
 import org.elasticsearch.action.admin.cluster.node.info.NodesInfoResponse;
@@ -14,7 +14,7 @@ import static org.hamcrest.Matchers.is;
 public class PluginTest extends ESIntegTestCase {
   @Override
   protected Collection<Class<? extends Plugin>> nodePlugins() {
-    return Collections.singleton(IngestBanoPlugin.class);
+    return Collections.singleton(LiuFangRestPlugin.class);
   }
 
   public void testPluginIsLoaded() throws Exception {
@@ -22,7 +22,7 @@ public class PluginTest extends ESIntegTestCase {
     for (NodeInfo nodeInfo : response.getNodes()) {
       boolean pluginFound = false;
       for (PluginInfo pluginInfo : nodeInfo.getPlugins().getPluginInfos()) {
-        if (pluginInfo.getName().equals(IngestBanoPlugin.class.getName())) {
+        if (pluginInfo.getName().equals(LiuFangRestPlugin.class.getName())) {
           pluginFound = true;
           break;
         }
