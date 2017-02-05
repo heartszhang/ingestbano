@@ -5,3 +5,4 @@
 *.iml
 target/
 javac-services.0.*
+.DS_Store

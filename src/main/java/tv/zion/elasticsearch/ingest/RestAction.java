@@ -1,4 +1,4 @@
-package tv.zion.elasticsearch.rest;
+package tv.zion.elasticsearch.ingest;
 
 import org.elasticsearch.client.node.NodeClient;
 import org.elasticsearch.common.Strings;
